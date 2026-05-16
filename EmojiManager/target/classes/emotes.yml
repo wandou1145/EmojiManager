@@ -1,0 +1,107 @@
+# ============================================
+#   EmojiManager - 表情配置文件 (emotes.yml)
+#   ⚠️ 注意：请不要直接修改此文件
+#   应该修改  plugins/EmojiManager/emotes.yml
+#   修改后输入 /em reload 即可热重载
+# ============================================
+
+# 每个表情包都配置在 emotes 下面
+emotes:
+
+  # ---------- 表情ID ----------
+  # 必须是英文小写，不能有空格和特殊符号
+  # 这个ID用于命令 (/e heart) 和管理员命令
+  # 多个表情包之间ID不能重复
+  heart:
+
+    # ---------- 显示名称 ----------
+    # 出现在 GUI 里的名字，支持中文
+    name: "爱心"
+
+    # ---------- 头顶显示的符号 ----------
+    # 发送到头顶的字符，可以使用 emoji 表情
+    # 也可以使用任何 Unicode 字符 (如 ☀️💎⭐)
+    symbol: "❤️"
+
+    # ---------- 皮肤纹理 ----------
+    # 这个值决定 GUI 里头颅的外观
+    # 有两种填写方式:
+    #
+    # 方式1: MineSkin Base64 (推荐)
+    #   1. 访问 https://mineskin.org
+    #   2. 上传你的表情图片 (建议 64x64 像素 PNG)
+    #   3. 复制生成的 Value 字段 (以 eyJ 开头的一长串字符串)
+    #   4. 粘贴到这里
+    #
+    # 方式2: 正版玩家名
+    #   直接填写正版 Minecraft 玩家的名字 (如 Notch、Dream)
+    #   插件会自动获取该玩家的皮肤作为表情图标
+    #   注意: 该玩家必须存在且拥有正版账号
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWIwY2MwYjFjZDIwZjI2MjI0Mjg4MjI1YjI5YjM4MjBhYzk0NjI0N2Y4MjQ4MjY3ZGFmM2I4M2Q3YzY4Y2IifX19"
+
+    # ---------- 购买价格 ----------
+    # 金币数量 (需要安装 Vault 和经济插件)
+    # 设为 0 表示免费，玩家打开 GUI 自动解锁
+    price: 100
+
+    # ---------- 是否启用 ----------
+    # true  = 显示在 GUI 中，玩家可见可用
+    # false = 隐藏，配置保留但玩家看不到
+    # 可以通过 /em gui edit remove/add 命令动态切换
+    enabled: true
+
+    # ---------- 发送音效 (可选) ----------
+    # 玩家发送这个表情时播放的音效
+    # 如果不写这一行，会使用 config.yml 里的默认音效
+    # 可用音效列表: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+    # 常用音效:
+    #   ENTITY_EXPERIENCE_ORB_PICKUP - 经验球拾取
+    #   ENTITY_CHICKEN_EGG           - 鸡下蛋
+    #   ENTITY_PLAYER_LEVELUP        - 升级
+    #   BLOCK_NOTE_BLOCK_PLING       - 音符盒叮咚
+    #   ENTITY_FIREWORK_ROCKET_BLAST - 烟花爆炸
+    sound: ENTITY_CHICKEN_EGG
+
+    # ---------- 粒子特效 (可选) ----------
+    # 玩家发送这个表情时显示的粒子
+    # 如果不写这一行，会使用 config.yml 里的默认粒子
+    # 可用粒子列表: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html
+    # 常用粒子:
+    #   HEART     - 爱心
+    #   FLAME     - 火焰
+    #   NOTE      - 音符
+    #   VILLAGER_HAPPY - 绿色星星
+    #   TOTEM_OF_UNDYING - 不死图腾
+    particle: HEART
+
+  # ============================================
+  #   更多表情包示例 (复制上面的格式即可)
+  # ============================================
+
+  laugh:
+    name: "笑哭"
+    symbol: "😂"
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjI3OTFjYzFiNDk5OWEzMjcxNGU1YjJkYzY3M2JjYTQwYjJmYjI3ZGI0YzJlM2E4YzQxNzI5ZjgzZWM1MCJ9fX0="
+    price: 200
+    enabled: true
+    # sound 和 particle 不写，会使用 config.yml 中的默认特效
+
+  fire:
+    name: "火焰"
+    symbol: "🔥"
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY5MTk2YjMzMGM2Yjg5NjJmMjNhZDU2MjdmYjZlYzNlM2M4M2YzMjdmZjlmZDVmZDY0YWMzYjViNjQzYjVlIn19fQ=="
+    price: 150
+    enabled: true
+    particle: FLAME
+
+  # ---------- 如何添加新表情 ----------
+  # 在 emotes: 下面新增一个条目，格式如下:
+  #
+  # 你的表情ID:
+  #   name: "表情名字"
+  #   symbol: "😊"
+  #   texture: "eyJ...或正版玩家名"
+  #   price: 价格
+  #   enabled: true
+  #
+  # 保存后输入 /em reload 即可生效
