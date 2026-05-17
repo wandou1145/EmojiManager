@@ -1,0 +1,19 @@
+# ============================================
+#   EmojiManager - MySQL 数据库配置
+#   仅当 config.yml 中 storage.type = mysql 时生效
+# ============================================
+
+mysql:
+  host: localhost
+  port: 3306
+  database: emojimanager
+  username: root
+  password: your_password
+  use-ssl: false
+  # 连接池设置
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 5
+    connection-timeout: 5000
+    idle-timeout: 300000
+    max-lifetime: 600000

@@ -1,0 +1,14 @@
+name: EmojiManager
+version: 1.2
+main: org.wandou.emojimanager.EmojiManager
+api-version: "1.21"
+author: Wandou
+folia-supported: true
+softdepend: [Vault]
+commands:
+  emoji:
+    usage: /<command>
+    aliases: [e]
+  em:
+    usage: /<command> <子命令>
+    permission: emojimanager.admin
