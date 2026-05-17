@@ -1,0 +1,9 @@
+org\wandou\emojimanager\EmoteGUI.class
+org\wandou\emojimanager\EmoteAdminCommand.class
+org\wandou\emojimanager\PlayerDataManager.class
+org\wandou\emojimanager\EmojiManager.class
+org\wandou\emojimanager\EmoteManager.class
+org\wandou\emojimanager\EmoteCommand.class
+org\wandou\emojimanager\EmoteDisplayer.class
+org\wandou\emojimanager\DatabaseManager.class
+org\wandou\emojimanager\EmoteManager$Emote.class

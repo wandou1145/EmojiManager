@@ -1,0 +1,17 @@
+name: EmojiManager
+version: 1.2
+main: org.wandou.emojimanager.EmojiManager
+api-version: "1.21"
+description: Emoji management – buy with coins, display overhead, sync to chat
+author: Wandou
+folia-supported: true
+softdepend: [Vault]
+commands:
+  emoji:
+    description: Open emoji GUI / quick send an emoji
+    usage: /<command> [emojiID]
+    aliases: [e]
+  em:
+    description: Admin emoji management commands
+    usage: /<command> <subcommand>
+    permission: emojimanager.admin
